@@ -1,0 +1,1 @@
+/home/vagrant/Code/codepanda/wp-content/plugins/query-monitor/wp-content/db.php
