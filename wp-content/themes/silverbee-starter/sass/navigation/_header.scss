@@ -1,9 +1,27 @@
 #masthead {
-  .site-branding {
-    .site-title {
-      span {
-        color: $color__highlight;
+  -ms-background-position-x: center;
+  background-position-x: center;
+
+  .container {
+    position: relative;
+
+    .site-branding {
+      .site-title {
+        a {
+          font-size: 60pt;
+          font-family: $font__highlight;
+          color: $color__menu;
+        }
+
+        a:hover {
+          text-decoration: none;
+        }
+
+        span {
+          color: $color__highlight;
+        }
       }
     }
   }
+
 }

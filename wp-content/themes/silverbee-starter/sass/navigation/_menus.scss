@@ -1,6 +1,6 @@
 .main-navigation {
 	clear: both;
-	display: block;
+	display: inline-block;
 	float: left;
 	width: 100%;
 
@@ -9,6 +9,9 @@
 		list-style: none;
 		margin: 0;
 		padding-left: 0;
+		position: absolute;
+		bottom: 0;
+		right: 0;
 
 		ul {
 			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
@@ -61,6 +64,21 @@
 	a {
 		display: block;
 		text-decoration: none;
+		color: $color__menu;
+		padding: 0 15px;
+		font-size: 20pt;
+
+		-webkit-transition: color 0.3s linear;
+		-moz-transition: color 0.3s linear;
+		-ms-transition: color 0.3s linear;
+		-o-transition: color 0.3s linear;
+		transition: color 0.3s linear;
+
+		font-family: $font__highlight;
+	}
+
+	a:hover {
+		color: $color__highlight;
 	}
 
 	.current_page_item > a,
