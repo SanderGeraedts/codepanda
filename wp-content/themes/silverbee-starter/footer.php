@@ -11,21 +11,16 @@
 
 ?>
 
-	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'silverbee-starter' ) ); ?>"><?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'silverbee-starter' ), 'WordPress' );
-			?></a>
-			<span class="sep"> | </span>
-			<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'silverbee-starter' ), 'silverbee-starter', '<a href="https://automattic.com/">Silverbee V.O.F.</a>' );
-			?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
+        <footer id="colophon" class="site-footer" role="contentinfo">
+            <div class="site-info">
+                <a href="<?php echo esc_url( __( 'https://wordpress.org/', 'silverbee-starter' ) ); ?>"><?php
+                    /* translators: %s: CMS name, i.e. WordPress. */
+                    printf( esc_html__( 'Proudly powered by %s', 'silverbee-starter' ), 'WordPress' );
+                ?></a>
+            </div><!-- .site-info -->
+        </footer><!-- #colophon -->
+	</div><!-- #content -->
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
