@@ -83,7 +83,6 @@ wp-content/uploads/
 wp-content/wp-cache-config.php
 wp-content/plugins/*
 wp-content/themes/**/node_modules
-wp-content/themes/**/dist
 
 
 ### Composer ###
@@ -122,5 +121,7 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
+
+phploy.ini
 
 # End of https://www.gitignore.io/api/macos
