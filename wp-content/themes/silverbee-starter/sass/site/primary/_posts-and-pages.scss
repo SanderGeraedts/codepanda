@@ -44,3 +44,29 @@
     }
   }
 }
+
+.home {
+  .site-main {
+    margin-top: 40px;
+
+    img {
+      border-radius: 50%;
+      float: right;
+      max-width: 200px;
+    }
+
+    .content {
+      min-height: 200px;
+      display: table;
+
+      > div {
+        display: table-cell;
+        vertical-align: middle;
+
+        p:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}

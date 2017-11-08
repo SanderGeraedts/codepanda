@@ -25,3 +25,47 @@
   }
 
 }
+
+@media only screen and (max-width: 703px) and (min-width: 600px) {
+  #masthead {
+    .container {
+      .site-branding {
+        .site-title {
+          a {
+            font-size: 50pt;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) and (min-width: 500px) {
+  #masthead {
+    .container {
+      .site-branding {
+        .site-title {
+          a {
+            font-size: 40pt;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  #masthead {
+    .container {
+      height: 130px;
+
+      .site-branding {
+        .site-title {
+          a {
+            font-size: 24pt;
+          }
+        }
+      }
+    }
+  }
+}
