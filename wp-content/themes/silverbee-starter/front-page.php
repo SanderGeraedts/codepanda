@@ -32,18 +32,45 @@ get_header(); ?>
             <section class="row" id="categories">
 				<?php $categories = get_categories();
 
-                $counter = 0;
+				$counter = 0;
 				foreach ( $categories as $category ) : ?>
-					<?php if ( $counter == 3 ) { break; } ?>
+					<?php if ( $counter == 3 ) {
+						break;
+					} ?>
                     <div class="col-md-4 category">
-                        <h2><a href="<?php echo get_category_link( $category->term_id ); ?>"><?php echo $category->name ?></a></h2>
+                        <h2>
+                            <a href="<?php echo get_category_link( $category->term_id ); ?>"><?php echo $category->name ?></a>
+                        </h2>
                         <p><?php echo $category->description; ?></p>
                     </div>
-                    <?php $counter ++; ?>
+					<?php $counter ++; ?>
 				<?php endforeach; ?>
             </section>
             <section class="row" id="lastest-post">
+                <div class="col-md-8 col-md-offset-2">
+					<?php
+					// the query
+					$the_query = new WP_Query( array(
+						'posts_per_page' => 1,
+					) );
+					?>
+					<?php if ( $the_query->have_posts() ) : ?>
+						<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 
+                            <header class="entry-header">
+									<?php the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' ); ?>
+                                    <div class="entry-meta">
+										<?php silverbee_starter_posted_on(); ?>
+                                    </div><!-- .entry-meta -->
+                            </header><!-- .entry-header -->
+                            <div class="entry-content">
+								<?php the_content(); ?>
+                            </div>
+
+						<?php endwhile; ?>
+						<?php wp_reset_postdata(); ?>
+					<?php endif; ?>
+                </div>
             </section>
         </main><!-- #main -->
 
