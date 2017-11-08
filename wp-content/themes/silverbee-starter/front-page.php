@@ -16,18 +16,37 @@ get_header(); ?>
 
     <div id="primary" class="content-area">
         <main id="main" class="site-main row" role="main">
-            <aside class="col-md-2 col-md-offset-2">
-                <img src="<?php echo get_stylesheet_directory_uri(); ?>/dist/img/intropic.jpg"
-                     alt="A picture of my face.">
-            </aside>
-            <div class="col-md-6 content">
-                <div>
-					<?php while ( have_posts() ) : the_post();
-						the_content();
-					endwhile; ?>
+            <section id="introduction" class="row">
+                <aside class="col-md-2 col-md-offset-2">
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/dist/img/intropic.jpg"
+                         alt="A picture of my face.">
+                </aside>
+                <div class="col-md-6 content">
+                    <div>
+						<?php while ( have_posts() ) : the_post();
+							the_content();
+						endwhile; ?>
+                    </div>
                 </div>
-            </div>
+            </section>
+            <section class="row" id="categories">
+				<?php $categories = get_categories();
+
+                $counter = 0;
+				foreach ( $categories as $category ) : ?>
+					<?php if ( $counter == 3 ) { break; } ?>
+                    <div class="col-md-4 category">
+                        <h2><a href="<?php echo get_category_link( $category->term_id ); ?>"><?php echo $category->name ?></a></h2>
+                        <p><?php echo $category->description; ?></p>
+                    </div>
+                    <?php $counter ++; ?>
+				<?php endforeach; ?>
+            </section>
+            <section class="row" id="lastest-post">
+
+            </section>
         </main><!-- #main -->
+
     </div><!-- #primary -->
 
 <?php
