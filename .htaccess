@@ -1,8 +1,12 @@
-# MAINTENANCE-PAGE REDIRECT
+
+# BEGIN WordPress
 <IfModule mod_rewrite.c>
- RewriteEngine on
- RewriteCond %{REMOTE_ADDR} !^131\.155\.16\.47
- RewriteCond %{REQUEST_URI} !/maintenance.html$ [NC]
- RewriteCond %{REQUEST_URI} !\.(jpe?g?|png|gif) [NC]
- RewriteRule .* /maintenance.html [R=302,L]
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
 </IfModule>
+
+# END WordPress
