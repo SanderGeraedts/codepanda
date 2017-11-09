@@ -65,7 +65,7 @@ fabric.properties
 
 ### WordPress ###
 
-/.htaccess
+#/.htaccess
 /license.txt
 /readme.html
 /sitemap.xml
