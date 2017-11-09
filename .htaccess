@@ -1,7 +1,3 @@
-ErrorDocument 403 /specific_page.html
-Order Allow,Deny
-Allow from 131.155.16.47
-
 # BEGIN WordPress
 <IfModule mod_rewrite.c>
 RewriteEngine On
@@ -10,6 +6,10 @@ RewriteRule ^index\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . /index.php [L]
+
+ErrorDocument 403 /specific_page.html
+Order Allow,Deny
+Allow from 131.155.16.47
 </IfModule>
 
 # END WordPress
